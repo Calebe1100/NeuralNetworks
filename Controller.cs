@@ -1,4 +1,5 @@
 ﻿using NeuralNetworks.useCases;
+using NeuralNetworks.Utils;
 using System;
 
 namespace NeuralNetworks
@@ -15,6 +16,7 @@ namespace NeuralNetworks
         public static void Main()
         {
 
+            var data = DataReading.ReadingAndGenerateInputText("../../Files/iris.data");
             Perceptron perceptron = new Perceptron(2, 1, 0.3);
 
             for (int e = 0; e < 1000; e++)

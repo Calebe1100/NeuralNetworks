@@ -34,11 +34,14 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Files\iris.data" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <Compile Include="Controller.cs" />
-    <Compile Include="useCases\Perceptron.cs" />
+    <Compile Include="Entities\Sample.cs" />
+    <Compile Include="UseCases\Perceptron.cs" />
+    <Compile Include="Utils\DataReading.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
