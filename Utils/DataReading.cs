@@ -9,9 +9,9 @@ namespace NeuralNetworks.Utils
 {
     public static class DataReading
     {
-        public static List<string> ReadingAndGenerateInputText(string path)
+        public static List<string[]> ReadingAndGenerateInputText(string path)
         {
-            List<string> lista = new List<string>();
+            List<string[]> lista = new List<string[]>();
 
             try
             {
@@ -21,10 +21,7 @@ namespace NeuralNetworks.Utils
                     {
                         string linha = sr.ReadLine();
                         string[] itens = linha.Split(',');
-                        foreach (string item in itens)
-                        {
-                            lista.Add(item.Trim());
-                        }
+                        lista.Add(itens);
                     }
                 }
             }
@@ -32,7 +29,7 @@ namespace NeuralNetworks.Utils
             {
                 Console.WriteLine("Ocorreu um erro ao ler o arquivo: " + ex.Message);
             }
-
+            lista.RemoveAt(lista.Count - 1);
             return lista;
         }
     }

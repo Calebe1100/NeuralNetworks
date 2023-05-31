@@ -42,6 +42,7 @@
     <Compile Include="Entities\Sample.cs" />
     <Compile Include="UseCases\Perceptron.cs" />
     <Compile Include="Utils\DataReading.cs" />
+    <Compile Include="Utils\FormatIrisData.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

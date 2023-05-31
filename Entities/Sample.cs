@@ -8,7 +8,13 @@ namespace NeuralNetworks.Entities
 {
     public class Sample
     {
-        public int[] CordX { get; set; }
-        public int[] CordY { get; set; }
+        public double[] CordX { get; set; }
+        public double[] CordY { get; set; }
+
+        public Sample(int lengthX, int lengthY)
+        {
+            CordX = new double[lengthX];
+            CordY = new double[lengthY];
+        }
     }
 }
